@@ -1,0 +1,52 @@
+generated: '2026-09-09'
+method: probed
+source: >-
+  Live HTTPS probes of the RFC 8615 /.well-known/ path set on every host this record knows
+  (www.dhs.gov and dhs.gov — the Federal Protective Service publishes no host of its own;
+  fps.dhs.gov and www.fps.dhs.gov do not resolve).
+note: >-
+  Every probed path returned HTTP 404. No WellKnown or SecurityTxt pointer is emitted in apis.yml,
+  because a recorded absence is not a served surface. The Department of Homeland Security operates a
+  department-wide vulnerability disclosure program at https://www.dhs.gov/vulnerability-disclosure-policy
+  (HTTP 200) which covers dhs.gov and therefore the FPS pages hosted on it, but that program is DHS's,
+  not the Federal Protective Service's, so it is recorded here as context and NOT wired as an
+  FPS Security pointer.
+hosts:
+  - host: www.dhs.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: dhs.gov
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+unresolved_hosts:
+  - host: fps.dhs.gov
+    note: DNS does not resolve (curl exit 6 / status 000)
+  - host: www.fps.dhs.gov
+    note: DNS does not resolve (curl exit 6 / status 000)
+checked: '2026-09-09'

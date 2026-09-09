@@ -30,16 +30,22 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/federal-protective-service.png
 access: 3rd-Party
 created: '2024-12-03'
-modified: '2026-04-28'
+modified: '2026-09-09'
 position: Consuming
 tags:
   - Federal-Government
   - Security
   - Law Enforcement
+  - Public Safety
+  - Physical Security
+  - Homeland Security
 tags_raw:
   - Federal Government
   - Security
   - Law Enforcement
+  - Public Safety
+  - Physical Security
+  - Homeland Security
 url: >-
   https://raw.githubusercontent.com/api-evangelist/federal-protective-service/refs/heads/main/apis.yml
 specificationVersion: '0.23'
@@ -54,3 +60,31 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+
+x-enrichment:
+  date: '2026-09-09'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    The Federal Protective Service publishes no host of its own (fps.dhs.gov does not resolve) and is
+    absent from the Department of Homeland Security developer program at https://www.dhs.gov/developer,
+    which lists only NTAS, MyTSA and FEMA APIs; the GSA federal API inventory carries no FPS row and the
+    DHS Project Open Data catalog (1,168 datasets) has no FPS-published dataset or API distribution.
+  evidence:
+    - url: https://www.dhs.gov/developer
+      status: 200
+    - url: https://www.dhs.gov/data.json
+      status: 200
+    - url: https://www.dhs.gov/.well-known/api-catalog
+      status: 404
+    - url: https://www.dhs.gov/openapi.json
+      status: 404
+    - url: https://raw.githubusercontent.com/GSA/federal-apis/master/inventory/federal-API-list.csv
+      status: 200
+  checked: '2026-09-09'
+x-parent: department-of-homeland-security
+x-relationship: division
