@@ -33,7 +33,7 @@ created: '2024-12-03'
 modified: '2026-09-09'
 position: Consuming
 tags:
-  - Federal-Government
+  - Federal Government
   - Security
   - Law Enforcement
   - Public Safety
@@ -46,6 +46,7 @@ tags_raw:
   - Public Safety
   - Physical Security
   - Homeland Security
+  - Federal-Government
 url: >-
   https://raw.githubusercontent.com/api-evangelist/federal-protective-service/refs/heads/main/apis.yml
 specificationVersion: '0.23'
