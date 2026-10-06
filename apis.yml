@@ -30,7 +30,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/federal-protective-service.png
 access: 3rd-Party
 created: '2024-12-03'
-modified: '2026-09-09'
+modified: '2026-10-06'
 position: Consuming
 tags:
   - Federal Government
@@ -52,6 +52,8 @@ url: >-
 specificationVersion: '0.23'
 apis: []
 common:
+  - url: https://www.dhs.gov/news
+    type: Blog
   - type: DomainSecurity
     url: security/federal-protective-service-domain-security.yml
   - type: LinkedIn
